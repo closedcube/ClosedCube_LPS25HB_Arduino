@@ -47,7 +47,7 @@ byte ClosedCube_LPS25HB::whoAmI() {
 	Wire.beginTransmission(_address);
 	Wire.write(0x0F);
 	Wire.endTransmission();
-	Wire.requestFrom(_address, 1);
+	Wire.requestFrom(_address, (uint8_t)1);
 	return Wire.read();
 }
 
@@ -106,7 +106,7 @@ uint8_t ClosedCube_LPS25HB::read(uint8_t reg) {
 	Wire.beginTransmission(_address);
 	Wire.write(reg);
 	Wire.endTransmission();
-	Wire.requestFrom(_address, 1);
+	Wire.requestFrom(_address, (uint8_t)1);
 	return Wire.read();
 }
 
