@@ -37,7 +37,7 @@ void loop()
 {
 	Serial.print("P=");
 	Serial.print(lps25hb.readPressure());
-	Serial.print(" mbar, T=");
+	Serial.print("hPa, T=");
 	Serial.print(lps25hb.readTemperature());
 	Serial.println("C");
 	delay(1000);
